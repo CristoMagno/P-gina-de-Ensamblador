@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilo2.css" rel="stylesheet" type="text/css">
+    <title>Index Lenguajes de interfaz</title>
+</head>
+<body><header>
+    <h1><a href="Inicio.html" id="tituloPrincipal">Instrucciones de lenguaje ensamblador</a></h1>
+
+    <input type="text" id="searchInput" placeholder="Ingresa una palabra" class="busqueda">
+    <button onclick="buscarPalabra()">Buscar</button>
+    <p id="result"></p>
+    <div class="dropdown">
+      <label class="iluminame">Ciclos numéricos</label>
+      <div class="dropdown-content">
+        <a href="loop.html">LOOP</a>
+        <a href="loop.html">LOOPE</a>
+        <a href="loop.html">LOOPNE</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <label class="iluminame">Comparación</label>
+      <div class="dropdown-content">
+        <a href="comparar.html">CMP</a>
+        <a href="comparar.html">CMPC</a>
+        <a href="comparar.html">CMPN</a>
+      </div>
+    </div>
+    <div class="dropdown">
+        <label class="iluminame">Saltos</label>
+        <div class="dropdown-content">
+          <a href="saltos.html">JZ</a>
+          <a href="saltos.html">JNZ</a>
+          <a href="saltos.html">JE</a>
+          <a href="saltos.html">JA</a>
+          <a href="saltos.html">JB</a>
+          <a href="saltos.html">JMP</a>
+          <a href="saltos.html">JG</a>
+          <a href="saltos.html">JL</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <label class="iluminame">Prueba</label>
+        <div class="dropdown-content">
+          <a href="prueba.html">TEST</a>
+          <a href="prueba.html">LEA</a>
+        </div>
+      </div>
+      <div class="dropdown">
+        <label class="iluminame">Ciclos condicionales</label>
+        <div class="dropdown-content">
+            <a href="ciclosCondicionales.html">JC</a>
+            <a href="ciclosCondicionales.html">JO</a>
+            <a href="ciclosCondicionales.html">JNC</a>
+            <a href="ciclosCondicionales.html">JP</a>
+            <a href="ciclosCondicionales.html">JNO</a>
+            <a href="ciclosCondicionales.html">JS</a>
+            <a href="ciclosCondicionales.html">JNP</a>
+            <a href="ciclosCondicionales.html">JNS</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <label class="iluminame">Incremento y Decremento</label>
+        <div class="dropdown-content">
+            <a href="incrementoDecremento.html">INC</a>
+            <a href="incrementoDecremento.html">DEC</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <label class="iluminame">Captura de cadena</label>
+        <div class="dropdown-content">
+            <a href="capturaCadena.html">MOVC</a>
+            <a href="capturaCadena.html">MOVW</a>
+            <a href="capturaCadena.html">CMPC</a>
+            <a href="capturaCadena.html">CMPW</a>
+            <a href="capturaCadena.html">SCAC</a>
+            <a href="capturaCadena.html">SCAW</a>
+            <a href="capturaCadena.html">STOC</a>
+            <a href="capturaCadena.html">STOT</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <label class="iluminame">Intrucciones aritméticas</label>
+        <div class="dropdown-content">
+            <a href="aritmetica.html">ADD</a>
+            <a href="aritmetica.html">SUB</a>
+            <a href="aritmetica.html">MUL</a>
+            <a href="aritmetica.html">DIV</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <label class="iluminame">Pila</label>
+        <div class="dropdown-content">
+            <a href="pila.html">PUSH</a>
+            <a href="pila.html">POP</a>
+        </div>
+      </div>
+    
+  </header>
+    <br class="espacio">
+    <footer>
+      <div style="text-align: center">
+      <img src="BlackCat.png" width="40" alt=""></div>
+      <p>Cristian ++ </p>
+    </footer>
+</body>
+<script>
+    function buscarPalabra() {
+            const palabraBuscada = document.getElementById('searchInput').value.toUpperCase(); // Convertir a mayúsculas
+            const contenidoPagina = document.body.innerText.toUpperCase(); // Convertir a mayúsculas
+
+            if (contenidoPagina.includes(palabraBuscada)) {
+                document.getElementById('result').textContent = `La palabra "${palabraBuscada}" se encuentra en la página.`;
+            } else {
+                document.getElementById('result').textContent = `La palabra "${palabraBuscada}" no se encontró en la página.`;
+            }
+        }
+</script>
+</html>
